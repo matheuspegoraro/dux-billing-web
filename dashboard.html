@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <link rel="shortcut icon" href="img/duckx_dark.png" />
+    <title>Dashboard - Dux Billing</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <style>
+        body {
+            padding-top: 4.5rem;
+        }
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        #chart_div {
+            height: 500px;
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="navbar-top-fixed.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="/"><img src="img/duckx.png" width="55px" alt="">Dux Billing</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Dashboard <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contas-a-pagar.html">Contas a Pagar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contas-a-receber.html">Contas a Receber</a>
+                </li>
+            </ul>
+        </div>
+        <a class="text-white" href="index.html">Sair <i class="fas fa-sign-out-alt"></i></a>
+    </nav>
+
+
+    <main role="main" class="container mt-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item" class="breadcrumb-item active" aria-current="page"><a href="">Dashboard</a> - Análises dos Fluxos</li>
+            </ol>
+        </nav>
+
+        <div id="chart_div" class="mt-4"></div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawBarColors);
+
+        function drawBarColors() {
+            var data = google.visualization.arrayToDataTable([
+                ['Mês', 'Entrada', 'Saída'],
+                ['Jan', 12000, 8406.65],
+                ['Fev', 764.50, 562.00],
+                ['Mar', 3500, 4900],
+                ['Abr', 5800, 9300],
+                ['Maio', 2300, 4670],
+                ['Jun', 15600, 7000],
+                ['Jul', 17200, 15700],
+                ['Ago', 3600, 7500],
+                ['Set', 5400, 2200],
+                ['Out', 8600, 7560],
+                ['Nov', 6000, 4000],
+                ['Dez', 5800, 4200],
+            ]);
+
+            var options = {
+                    title: 'Fluxo Financeiro de 2019',
+                    chartArea: {width: '50%'},
+                    colors: ['green', 'red'],
+                    hAxis: {
+                    title: 'Fluxo Financeiro',
+                    minValue: 0
+                },
+                vAxis: {
+                    title: 'Meses'
+                }
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+            }
+    </script>
+</body>
+
+</html>

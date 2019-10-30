@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <link rel="shortcut icon" href="img/duckx_dark.png" />
+    <title>Dashboard - Dux Billing</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <!-- Custom styles for this template -->
+    <link href="css/contas-a-receber.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="/"><img src="img/duckx.png" width="55px" alt="">Dux Billing</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contas-a-pagar.html">Contas a Pagar</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contas-a-receber.html">Contas a Receber </a>
+                </li>
+            </ul>
+        </div>
+        <a class="text-white" href="index.html">Sair <i class="fas fa-sign-out-alt"></i></a>
+    </nav>
+
+    <main role="main" class="container mt-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item" class="breadcrumb-item active" aria-current="page"><a href="">Contas a Receber</a> </li>
+            </ol>
+        </nav>
+
+        <table class="table table-hover bg-white">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Pagador</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Data de Vencimento</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="list-group-item-action list-group-item-success">
+                <th scope="row">1</th>
+                <td>Davis Inc.</td>
+                <td>R$ 7.895,98</td>
+                <td>15/10/2019</td>
+                <td><span class="badge badge-success">Recebido</span></td>
+              </tr>
+              <tr class="list-group-item-action list-group-item-danger">
+                <th scope="row">2</th>
+                <td>Marshmallow Company.</td>
+                <td>R$ 454,87</td>
+                <td>15/10/2019</td>
+                <td><span class="badge badge-danger">A Receber</span></td>
+              </tr>
+              <tr class="list-group-item-action list-group-item-warning">
+                <th scope="row">3</th>
+                <td>Murray S/A</td>
+                <td>R$ 65.788,98</td>
+                <td>19/10/2019</td>
+                <td><span class="badge badge-warning">Pendente</span></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td> Sancho Company</td>
+                <td>R$ 6.543,87</td>
+                <td>22/10/2019</td>
+                <td><span class="badge badge-secondary">Pendente</span></td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Champa Inc.</td>
+                <td>R$ 54.875,64</td>
+                <td>01/11/2019</td>
+                <td><span class="badge badge-secondary">Pendente</span></td>
+              </tr>
+            
+            </tbody>
+          </table>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   
+
+</body>
+
+</html>
